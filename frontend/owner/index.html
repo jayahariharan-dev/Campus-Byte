@@ -1,0 +1,345 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Campus Byte — Canteen</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+  <link
+    href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Space+Grotesk:wght@500;600;700&display=swap"
+    rel="stylesheet">
+
+  <link rel="stylesheet" href="css/owner.css">
+
+</head>
+
+<body>
+
+  <header>
+
+    <a class="brand" href="owner.html">
+
+      <span>CB</span>
+
+      <b>
+        Campus<span>Byte</span>
+      </b>
+
+    </a>
+
+    <nav class="owner-nav">
+
+      <a href="index.html" class="active">
+        Dashboard
+      </a>
+
+      <a href="owner-orders.html">
+        📦 Today's Orders
+      </a>
+
+      <a href="#menu">
+        🍛 Today's Menu
+      </a>
+
+      <a href="#scanner">
+        📷 QR Scanner
+      </a>
+
+    </nav>
+
+    <div class="right">
+
+      <strong id="ownerName">
+        Canteen
+      </strong>
+
+      <button id="logout">
+        Logout
+      </button>
+
+    </div>
+
+  </header>
+
+
+  <main>
+
+    <section class="hero">
+
+      <div>
+
+        <small>CANTEEN OWNER</small>
+
+        <h1>
+          Manage today's food. 🍛
+        </h1>
+
+        <p>
+          Add food items and publish what students can order today.
+        </p>
+
+      </div>
+
+      <div class="hero-icon">
+        🍽️
+      </div>
+
+    </section>
+
+
+    <section class="layout">
+
+
+      <div class="panel">
+
+        <div class="panel-title">
+
+          <div>
+
+            <small>FOOD ITEMS</small>
+
+            <h2>
+              Add a food item
+            </h2>
+
+          </div>
+
+        </div>
+
+
+        <form id="foodForm">
+
+          <label>
+            Food name
+
+            <input id="foodName" required placeholder="e.g. Masala Dosa">
+
+          </label>
+
+
+          <label>
+
+            Category
+
+            <select id="category">
+
+              <option>Meal</option>
+              <option>Snack</option>
+              <option>Rice</option>
+              <option>Drink</option>
+
+            </select>
+
+          </label>
+
+
+          <label>
+
+            Description
+
+            <textarea id="description" placeholder="Short description"></textarea>
+
+          </label>
+
+
+          <button class="primary">
+            Add Food Item
+          </button>
+
+        </form>
+
+
+        <p id="foodMessage" class="message"></p>
+
+      </div>
+
+
+      <div class="panel">
+
+        <div class="panel-title">
+
+          <div>
+
+            <small>TODAY'S MENU</small>
+
+            <h2>
+              Publish menu item
+            </h2>
+
+          </div>
+
+        </div>
+
+
+        <form id="menuForm">
+
+          <label>
+
+            Food item
+
+            <select id="foodSelect" required>
+
+              <option value="">
+                Choose food
+              </option>
+
+            </select>
+
+          </label>
+
+
+          <label>
+
+            Price (₹)
+
+            <input id="price" type="number" min="1" step="0.01" required placeholder="40">
+
+          </label>
+
+
+          <label>
+
+            Available quantity
+
+            <input id="quantity" type="number" min="0" placeholder="50">
+
+          </label>
+
+
+          <div class="two">
+
+            <label>
+
+              Order deadline
+
+              <input id="deadline" type="time" value="10:00">
+
+            </label>
+
+
+            <label>
+
+              Pickup starts
+
+              <input id="pickupStart" type="time" value="12:30">
+
+            </label>
+
+          </div>
+
+
+          <label>
+
+            Pickup ends
+
+            <input id="pickupEnd" type="time" value="13:30">
+
+          </label>
+
+
+          <button class="primary">
+
+            Publish to Today's Menu
+
+          </button>
+
+        </form>
+
+
+        <p id="menuMessage" class="message"></p>
+
+      </div>
+
+    </section>
+
+
+    <section class="panel menu-panel" id="menu">
+
+      <div class="panel-title">
+
+        <div>
+
+          <small>PREVIEW</small>
+
+          <h2>
+            Today's published menu
+          </h2>
+
+        </div>
+
+        <button id="refresh" class="secondary">
+          Refresh
+        </button>
+
+      </div>
+
+
+      <div id="published" class="published">
+        Loading...
+      </div>
+
+    </section>
+
+
+    <section class="panel scanner-panel" id="scanner">
+
+      <div class="panel-title">
+
+        <div>
+          <small>PICKUP</small>
+
+          <h2>
+            Scan Student QR
+          </h2>
+        </div>
+
+      </div>
+
+      <p class="scanner-description">
+        Scan the student's pickup QR code to verify and complete the order.
+      </p>
+
+      <div class="scanner-box">
+
+        <div id="qr-reader"></div>
+
+      </div>
+
+      <div class="scanner-controls">
+
+        <button id="startScannerBtn" class="primary scanner-control-btn">
+          📷 Start Scanner
+        </button>
+
+        <button id="stopScannerBtn" class="secondary scanner-control-btn" style="display: none;">
+          ⏹ Stop Scanner
+        </button>
+
+      </div>
+
+      <p id="scannerMessage" class="message">
+        Scanner is currently off.
+      </p>
+
+      <div id="scanResult" class="scan-result" style="display: none;">
+
+      </div>
+
+    </section>
+
+  </main>
+
+
+  <script src="../js/config.js"></script>
+  <script src="../js/html5-qrcode.min.js"></script>
+  <script src="js/owner.js"></script>
+
+</body>
+
+</html>

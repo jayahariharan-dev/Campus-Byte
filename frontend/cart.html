@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+  <meta charset="UTF-8">
+
+  <meta
+    name="viewport"
+    content="width=device-width, initial-scale=1.0"
+  >
+
+  <title>Campus Byte — My Cart</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+
+  <link
+    rel="preconnect"
+    href="https://fonts.gstatic.com"
+    crossorigin
+  >
+
+  <link
+    href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Space+Grotesk:wght@500;600;700&display=swap"
+    rel="stylesheet"
+  >
+
+  <link rel="stylesheet" href="css/cart.css">
+
+</head>
+
+
+<body>
+
+
+<header class="topbar">
+
+  <a class="brand" href="dashboard.html">
+
+    <span class="brand-mark">CB</span>
+
+    <span class="brand-name">
+      Campus<span>Byte</span>
+    </span>
+
+  </a>
+
+
+  <a class="back-btn" href="dashboard.html">
+    ← Dashboard
+  </a>
+
+</header>
+
+
+
+<main class="cart-page">
+
+
+  <section class="cart-header">
+
+    <span class="eyebrow">
+      CAMPUS BYTE
+    </span>
+
+    <h1>
+      My Cart 🛒
+    </h1>
+
+    <p>
+      Review your selected food before placing your order.
+    </p>
+
+  </section>
+
+
+
+  <div id="cartStatus" class="cart-status">
+    Loading your cart...
+  </div>
+
+
+
+  <section class="cart-layout">
+
+
+    <div id="cartItems" class="cart-items">
+    </div>
+
+
+    <aside class="summary-card">
+
+      <h2>
+        Order Summary
+      </h2>
+
+
+      <div class="summary-row">
+
+        <span>
+          Items
+        </span>
+
+        <strong id="summaryItems">
+          0
+        </strong>
+
+      </div>
+
+
+      <div class="summary-row">
+
+        <span>
+          Subtotal
+        </span>
+
+        <strong id="summarySubtotal">
+          ₹0.00
+        </strong>
+
+      </div>
+
+
+      <div class="summary-line"></div>
+
+
+      <div class="total-row">
+
+        <span>
+          Total
+        </span>
+
+        <strong id="summaryTotal">
+          ₹0.00
+        </strong>
+
+      </div>
+
+
+      <!-- PAYMENT METHOD -->
+
+      <div class="payment-section">
+
+        <h3>
+          Payment Method
+        </h3>
+
+
+        <label class="payment-option">
+
+          <input
+            type="radio"
+            name="paymentMethod"
+            value="ONLINE"
+            checked
+          >
+
+          <span>
+            💳 Pay Online
+          </span>
+
+        </label>
+
+
+        <label class="payment-option">
+
+          <input
+            type="radio"
+            name="paymentMethod"
+            value="CASH"
+          >
+
+          <span>
+            💵 Cash on Pickup
+          </span>
+
+        </label>
+
+      </div>
+
+
+      <button
+        id="checkoutBtn"
+        class="checkout-btn"
+      >
+        Place Order
+      </button>
+
+    </aside>
+
+
+  </section>
+
+
+</main>
+
+
+
+<script src="js/cart.js"></script>
+
+</body>
+
+</html>

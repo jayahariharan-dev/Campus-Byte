@@ -1,0 +1,397 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Campus Byte — Student Canteen</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+
+<body>
+
+<main class="auth-page">
+
+  <!-- LEFT BRAND PANEL -->
+  <section class="brand-panel">
+
+    <div class="brand">
+      <div class="brand-mark">
+        <span>CB</span>
+      </div>
+      <span class="brand-name">Campus<span>Byte</span></span>
+    </div>
+
+    <div class="hero-content">
+
+      <div class="floating-card card-one">
+        <span class="mini-icon">🍕</span>
+        <div>
+          <strong>Veg Pizza</strong>
+          <small>₹80 · Ready in 12 min</small>
+        </div>
+        <span class="check">✓</span>
+      </div>
+
+      <div class="floating-card card-two">
+        <span class="mini-icon">🥤</span>
+        <div>
+          <strong>Cold Coffee</strong>
+          <small>₹45 · Added to order</small>
+        </div>
+        <span class="quantity">×1</span>
+      </div>
+
+      <div class="hero-copy">
+        <span class="eyebrow">YOUR CAMPUS. YOUR CANTEEN.</span>
+
+        <h1>
+          Good food.<br>
+          <em>Zero waiting.</em>
+        </h1>
+
+        <p>
+          Order your campus favourites before you reach the counter.
+          Eat more, wait less.
+        </p>
+      </div>
+
+    </div>
+
+    <div class="panel-footer">
+      <span>⚡ Quick ordering</span>
+      <span>•</span>
+      <span>🍴 Campus favourites</span>
+      <span>•</span>
+      <span>🎓 Made for students</span>
+    </div>
+
+  </section>
+
+
+  <!-- FORM PANEL -->
+  <section class="form-panel">
+
+    <div class="form-container">
+
+      <div class="mobile-brand">
+        <div class="brand-mark">
+          <span>CB</span>
+        </div>
+        <span class="brand-name">Campus<span>Byte</span></span>
+      </div>
+
+
+      <div class="form-heading">
+        <span class="welcome" id="welcomeText">WELCOME BACK</span>
+
+        <h2 id="formTitle">
+          Login to your account
+        </h2>
+
+        <p id="formSubtitle">
+          Your next meal is just a few taps away.
+        </p>
+      </div>
+
+
+      <!-- LOGIN / SIGNUP TABS -->
+      <div class="tabs">
+
+        <button
+          class="tab active"
+          type="button"
+          data-mode="login">
+          Login
+        </button>
+
+        <button
+          class="tab"
+          type="button"
+          data-mode="signup">
+          Sign up
+        </button>
+
+        <div class="tab-slider"></div>
+
+      </div>
+
+      <!-- Shows backend errors (e.g. "email already registered") -->
+      <div class="server-message hidden" id="serverMessage"></div>
+
+      <form id="authForm" novalidate>
+
+        <!-- NAME -->
+        <div class="signup-only hidden" id="nameField">
+
+          <label for="name">
+            Full name
+          </label>
+
+          <div class="input-wrap">
+
+            <span class="input-icon">◯</span>
+
+            <input
+              type="text"
+              id="name"
+              placeholder="Your full name"
+              autocomplete="name"
+            />
+
+          </div>
+
+          <span class="error" id="nameError"></span>
+
+        </div>
+
+
+        <!-- ENROLLMENT NUMBER -->
+        <div class="signup-only hidden" id="enrollField">
+
+          <label for="enrollNo">
+            Enrollment number
+          </label>
+
+          <div class="input-wrap">
+
+            <span class="input-icon">#</span>
+
+            <input
+              type="text"
+              id="enrollNo"
+              placeholder="Enter your enrollment number"
+              autocomplete="off"
+            />
+
+          </div>
+
+          <span class="error" id="enrollError"></span>
+
+        </div>
+
+
+        <!-- COLLEGE -->
+        <div class="signup-only hidden" id="collegeField">
+
+          <label for="college">
+            College
+          </label>
+
+          <div class="input-wrap select-wrap">
+
+            <span class="input-icon">⌂</span>
+
+            <select id="college" required>
+              <option value="" selected disabled>
+                Select your college
+              </option>
+
+              <option value="MVIT">
+                MVIT
+              </option>
+            </select>
+
+          </div>
+
+          <span class="error" id="collegeError"></span>
+
+        </div>
+
+
+        <!-- EMAIL -->
+        <div class="field">
+
+          <label for="email">
+            College email
+          </label>
+
+          <div class="input-wrap">
+
+            <span class="input-icon">@</span>
+
+            <input
+              type="email"
+              id="email"
+              placeholder="you@college.edu"
+              autocomplete="email"
+            />
+
+          </div>
+
+          <span class="error" id="emailError"></span>
+
+        </div>
+
+
+        <!-- PASSWORD -->
+        <div class="field">
+
+          <label for="password">
+            Password
+          </label>
+
+          <div class="input-wrap">
+
+            <span class="input-icon">••</span>
+
+            <input
+              type="password"
+              id="password"
+              placeholder="Enter your password"
+              autocomplete="current-password"
+            />
+
+            <button
+              type="button"
+              class="password-toggle"
+              id="passwordToggle">
+              Show
+            </button>
+
+          </div>
+
+          <span class="error" id="passwordError"></span>
+
+        </div>
+
+
+        <!-- PASSWORD STRENGTH -->
+        <div
+          class="password-strength hidden"
+          id="passwordStrength">
+
+          <div class="strength-bars">
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+          </div>
+
+          <small id="strengthText">
+            Password strength
+          </small>
+
+        </div>
+
+
+        <!-- LOGIN OPTIONS -->
+        <div
+          class="form-options"
+          id="loginOptions">
+
+          <label class="remember">
+
+            <input type="checkbox" />
+
+            <span class="custom-checkbox"></span>
+
+            Remember me
+
+          </label>
+
+          <a href="#" id="forgotPassword">
+            Forgot password?
+          </a>
+
+        </div>
+
+
+        <!-- TERMS -->
+        <label
+          class="terms hidden"
+          id="terms">
+
+          <input
+            type="checkbox"
+            id="termsCheck"
+          />
+
+          <span class="custom-checkbox"></span>
+
+          <span>
+            I agree to the
+            <a href="#">Terms</a>
+            &
+            <a href="#">Privacy Policy</a>.
+          </span>
+
+        </label>
+
+
+        <!-- SUBMIT -->
+        <button
+          class="submit-btn"
+          type="submit"
+          id="submitBtn">
+
+          <span id="submitText">
+            Login
+          </span>
+
+          <span class="arrow">
+            →
+          </span>
+
+        </button>
+
+      </form>
+
+
+      <!-- SWITCH LOGIN / SIGNUP -->
+      <p
+        class="switch-text"
+        id="switchText">
+
+        New to Campus Byte?
+
+        <button
+          type="button"
+          id="switchBtn">
+          Create an account
+        </button>
+
+      </p>
+
+
+      <!-- SUCCESS -->
+      <div
+        class="success-message hidden"
+        id="successMessage">
+
+        <span>✓</span>
+
+        <div>
+
+          <strong>
+            You're all set!
+          </strong>
+
+          <p id="successText">
+            Welcome to Campus Byte.
+          </p>
+
+        </div>
+
+      </div>
+
+    </div>
+
+
+    <div class="copyright">
+      © 2026 Campus Byte · Built for campus life
+    </div>
+
+  </section>
+
+</main>
+
+<script src="js/config.js"></script>
+<script src="js/script.js"></script>
+
+</body>
+</html>

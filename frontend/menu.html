@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Campus Byte — Today's Menu</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="css/menu.css">
+</head>
+
+<body>
+
+<header class="topbar">
+
+  <a class="brand" href="dashboard.html">
+    <span class="brand-mark">CB</span>
+    <span class="brand-name">Campus<span>Byte</span></span>
+  </a>
+
+  <div class="top-actions">
+    <a href="dashboard.html">Dashboard</a>
+    <button id="logoutBtn">Logout</button>
+  </div>
+
+</header>
+
+
+<main>
+
+  <section class="intro">
+
+    <span class="eyebrow">TODAY'S MENU</span>
+
+    <h1>What's cooking today? 🍛</h1>
+
+    <p>
+      Choose your favourite food from today's available menu.
+    </p>
+
+  </section>
+
+
+  <div id="message" class="message">
+    Loading today's menu...
+  </div>
+
+
+  <section id="menuGrid" class="menu-grid"></section>
+
+</main>
+
+
+<script src="js/config.js"></script>
+<script src="js/menu.js"></script>
+
+</body>
+
+</html>

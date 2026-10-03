@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Campus Byte — Today's Orders</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+  <link
+    href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Space+Grotesk:wght@500;600;700&display=swap"
+    rel="stylesheet">
+
+  <link rel="stylesheet" href="css/owner-orders.css">
+
+</head>
+
+<body>
+
+  <!-- =========================
+       NAVBAR
+       ========================= -->
+
+  <header>
+
+    <a class="brand" href="index.html">
+
+      <span>CB</span>
+
+      <b>
+        Campus<span>Byte</span>
+      </b>
+
+    </a>
+
+    <nav class="owner-nav">
+
+      <a href="index.html">
+        Dashboard
+      </a>
+
+      <a href="owner-orders.html" class="active">
+        📦 Today's Orders
+      </a>
+
+      <a href="index.html#menu">
+        🍛 Today's Menu
+      </a>
+
+      <a href="index.html#scanner">
+        📷 QR Scanner
+      </a>
+
+    </nav>
+
+    <div class="right">
+
+      <strong id="ownerName">
+        Canteen
+      </strong>
+
+      <button id="logout">
+        Logout
+      </button>
+
+    </div>
+
+  </header>
+
+
+  <main>
+
+    <!-- =========================
+         PAGE HEADER
+         ========================= -->
+
+    <section class="page-header">
+
+      <div>
+
+        <small>ORDER MANAGEMENT</small>
+
+        <h1>
+          Today's Orders 📦
+        </h1>
+
+        <p>
+          View and manage student orders for your canteen.
+        </p>
+
+      </div>
+
+      <button id="refreshOrders" class="refresh-btn">
+        ↻ Refresh
+      </button>
+
+    </section>
+
+
+    <!-- =========================
+         ORDER SUMMARY
+         ========================= -->
+
+    <section class="summary-grid">
+
+      <div class="summary-card">
+
+        <span class="summary-icon pending">
+          ⏳
+        </span>
+
+        <div>
+          <small>Pending Today</small>
+          <strong id="pendingCount">0</strong>
+        </div>
+
+      </div>
+
+
+      <div class="summary-card">
+
+        <span class="summary-icon completed">
+          ✓
+        </span>
+
+        <div>
+          <small>Completed Today</small>
+          <strong id="completedCount">0</strong>
+        </div>
+
+      </div>
+
+
+      <div class="summary-card">
+
+        <span class="summary-icon overall">
+          📊
+        </span>
+
+        <div>
+          <small>Overall Orders</small>
+          <strong id="overallCount">0</strong>
+        </div>
+
+      </div>
+
+    </section>
+
+
+    <!-- =========================
+         ORDER TABS
+         ========================= -->
+
+    <section class="orders-panel">
+
+      <div class="orders-heading">
+
+        <div>
+
+          <small>ORDERS</small>
+
+          <h2 id="ordersTitle">
+            Today's Pending Orders
+          </h2>
+
+        </div>
+
+      </div>
+
+
+      <div class="order-tabs">
+
+        <button
+          class="order-tab active"
+          data-view="pending">
+          Pending Today
+        </button>
+
+        <button
+          class="order-tab"
+          data-view="completed">
+          Completed Today
+        </button>
+
+        <button
+          class="order-tab"
+          data-view="all">
+          Overall Orders
+        </button>
+
+      </div>
+
+
+      <p id="ordersMessage" class="orders-message">
+        Loading orders...
+      </p>
+
+
+      <div id="ordersList" class="orders-list">
+
+      </div>
+
+    </section>
+
+  </main>
+
+
+  <script src="../js/config.js"></script>
+  <script src="js/owner-orders.js"></script>
+
+</body>
+
+</html>

@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Campus Byte — Dashboard</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+  <link
+    href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Space+Grotesk:wght@500;600;700&display=swap"
+    rel="stylesheet">
+
+  <link rel="stylesheet" href="css/dashboard.css">
+</head>
+
+<body>
+
+  <header class="topbar">
+
+    <a class="brand" href="dashboard.html">
+      <span class="brand-mark">CB</span>
+      <span class="brand-name">Campus<span>Byte</span></span>
+    </a>
+
+    <nav class="nav-links">
+      <a href="#" class="active">Dashboard</a>
+      <a href="#todayMenu">Menu</a>
+      <a href="orders.html" class="ordersAction">My Orders</a>
+    </nav>
+
+    <div class="user-area">
+      <div class="user-avatar" id="userAvatar">S</div>
+
+      <div class="user-info">
+        <span class="user-label">Welcome back</span>
+        <span id="welcomeName">Student</span>
+      </div>
+
+      <button id="logoutBtn">Logout</button>
+    </div>
+
+  </header>
+
+
+  <main class="dashboard">
+
+    <!-- HERO -->
+    <section class="hero-card">
+
+      <div class="hero-content">
+
+        <span class="eyebrow">CAMPUS FOOD, SIMPLIFIED</span>
+
+        <h1>
+          Hey, <span id="heroName">Student</span> 👋
+        </h1>
+
+        <p>
+          Your campus meals, orders and pickups — all in one place.
+        </p>
+
+        <button class="primary-btn" id="menuBtn">
+          🍽️ Explore Today's Menu
+        </button>
+
+      </div>
+
+      <div class="hero-visual">
+
+        <div class="food-circle">🍛</div>
+
+        <div class="floating-card card-one">
+          <span>🍴</span>
+          <div>
+            <strong>Fresh Food</strong>
+            <small>Made for campus</small>
+          </div>
+        </div>
+
+        <div class="floating-card card-two">
+          <span>⚡</span>
+          <div>
+            <strong>Quick Pickup</strong>
+            <small>No long queues</small>
+          </div>
+        </div>
+
+      </div>
+
+    </section>
+
+
+    <!-- QUICK STATS -->
+    <section class="stats-grid">
+
+      <div class="stat-card">
+        <div class="stat-icon orange">🍱</div>
+        <div>
+          <span class="stat-label">Today's Menu</span>
+          <strong id="menuCount">Loading...</strong>
+        </div>
+      </div>
+
+      <div class="stat-card">
+        <div class="stat-icon dark">🛒</div>
+        <div>
+          <span class="stat-label">My Cart</span>
+          <strong>0 Items</strong>
+        </div>
+      </div>
+
+      <div class="stat-card">
+        <div class="stat-icon light">📦</div>
+        <div>
+          <span class="stat-label">Active Orders</span>
+          <strong>0 Orders</strong>
+        </div>
+      </div>
+
+    </section>
+
+
+    <!-- TODAY'S MENU -->
+    <section class="section" id="todayMenu">
+
+      <div class="section-heading menu-heading">
+        <div>
+          <span class="eyebrow">AVAILABLE TODAY</span>
+          <h2>Today's Menu</h2>
+        </div>
+
+        <button class="refresh-btn" id="refreshMenuBtn">
+          ↻ Refresh
+        </button>
+      </div>
+
+      <div id="menuStatus" class="menu-status">
+        Loading today's menu...
+      </div>
+
+      <div id="menuGrid" class="menu-grid"></div>
+
+    </section>
+
+
+    <!-- QUICK ACTIONS -->
+    <section class="section">
+
+      <div class="section-heading">
+        <div>
+          <span class="eyebrow">QUICK ACCESS</span>
+          <h2>What would you like to do?</h2>
+        </div>
+      </div>
+
+
+      <div class="action-grid">
+
+        <div class="action-card" id="menuAction">
+          <div class="action-icon">🍛</div>
+
+          <div class="action-content">
+            <h3>Today's Menu</h3>
+            <p>See today's available meals, snacks and prices.</p>
+          </div>
+
+          <span class="arrow">→</span>
+        </div>
+
+
+        <div class="action-card coming-soon">
+          <div class="action-icon">🛒</div>
+
+          <div class="action-content">
+            <h3>My Cart</h3>
+            <p>Review your selected food and place an order.</p>
+          </div>
+
+          <span class="arrow">→</span>
+        </div>
+
+
+        <div class="action-card" id="ordersAction">
+          <div class="action-icon">📦</div>
+
+          <div class="action-content">
+            <h3>My Orders</h3>
+            <p>Track your orders and check their current status.</p>
+          </div>
+
+          <span class="arrow">→</span>
+        </div>
+
+
+        <div class="action-card" id="pickupQrAction">
+          <div class="action-icon">📱</div>
+
+          <div class="action-content">
+            <h3>Pickup QR</h3>
+            <p>Access your QR code when your order is ready.</p>
+          </div>
+
+          <span class="arrow">→</span>
+        </div>
+
+      </div>
+
+    </section>
+
+
+    <!-- HOW IT WORKS -->
+    <section class="section">
+
+      <div class="section-heading">
+        <div>
+          <span class="eyebrow">CAMPUS BYTE</span>
+          <h2>How it works</h2>
+        </div>
+      </div>
+
+
+      <div class="steps">
+
+        <div class="step">
+          <span class="step-number">01</span>
+          <div>
+            <h3>Choose your food</h3>
+            <p>Browse the meals available at your campus canteen.</p>
+          </div>
+        </div>
+
+
+        <div class="step">
+          <span class="step-number">02</span>
+          <div>
+            <h3>Place your order</h3>
+            <p>Add your food to the cart and complete checkout.</p>
+          </div>
+        </div>
+
+
+        <div class="step">
+          <span class="step-number">03</span>
+          <div>
+            <h3>Pick it up</h3>
+            <p>Show your order QR code and collect your food.</p>
+          </div>
+        </div>
+
+      </div>
+
+    </section>
+
+
+    <footer>
+      <span>Campus<span>Byte</span></span>
+      <p>Smart Food. Better Campus.</p>
+    </footer>
+
+  </main>
+
+
+  <script src="js/dashboard.js"></script>
+
+</body>
+
+</html>

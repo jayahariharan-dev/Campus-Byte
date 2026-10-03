@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+  <meta charset="UTF-8">
+
+  <meta
+    name="viewport"
+    content="width=device-width, initial-scale=1.0"
+  >
+
+  <title>Campus Byte — My Orders</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+
+  <link
+    rel="preconnect"
+    href="https://fonts.gstatic.com"
+    crossorigin
+  >
+
+  <link
+    href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Space+Grotesk:wght@500;600;700&display=swap"
+    rel="stylesheet"
+  >
+
+  <link rel="stylesheet" href="css/orders.css">
+
+</head>
+
+
+<body>
+
+
+<header class="topbar">
+
+  <a class="brand" href="dashboard.html">
+
+    <span class="brand-mark">
+      CB
+    </span>
+
+    <span class="brand-name">
+      Campus<span>Byte</span>
+    </span>
+
+  </a>
+
+
+  <a class="back-btn" href="dashboard.html">
+    ← Dashboard
+  </a>
+
+</header>
+
+
+
+<main class="orders-page">
+
+
+  <section class="orders-header">
+
+    <span class="eyebrow">
+      CAMPUS BYTE
+    </span>
+
+    <h1>
+      My Orders 📦
+    </h1>
+
+    <p>
+      View your orders, payment details and pickup status.
+    </p>
+
+  </section>
+
+
+
+  <div
+    id="ordersStatus"
+    class="orders-status"
+  >
+    Loading your orders...
+  </div>
+
+
+
+  <section
+    id="ordersList"
+    class="orders-list"
+  ></section>
+
+
+</main>
+
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/qrcodejs/1.0.0/qrcode.min.js"></script>
+<script src="js/orders.js"></script>
+
+</body>
+
+</html>

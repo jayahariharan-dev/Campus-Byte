@@ -1,0 +1,679 @@
+:root {
+
+  --cream: #f4efe9;
+  --orange: #ff6b35;
+  --orange-dark: #e85a28;
+  --ink: #252321;
+  --muted: #77716b;
+  --line: #e2dbd4;
+  --white: #ffffff;
+  --soft-orange: #fff1ea;
+
+}
+
+
+* {
+
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+
+}
+
+
+body {
+
+  min-height: 100vh;
+
+  background: var(--cream);
+
+  color: var(--ink);
+
+  font-family: "DM Sans", sans-serif;
+
+}
+
+
+/* =========================
+   TOPBAR
+========================= */
+
+.topbar {
+
+  height: 76px;
+
+  display: flex;
+
+  align-items: center;
+
+  padding: 0 6%;
+
+  background: rgba(255,255,255,0.92);
+
+  border-bottom: 1px solid var(--line);
+
+}
+
+
+.brand {
+
+  display: flex;
+
+  align-items: center;
+
+  gap: 10px;
+
+  text-decoration: none;
+
+  color: var(--ink);
+
+}
+
+
+.brand-mark {
+
+  width: 36px;
+
+  height: 36px;
+
+  display: grid;
+
+  place-items: center;
+
+  border-radius: 10px;
+
+  background: var(--orange);
+
+  color: white;
+
+  font: 700 12px "Space Grotesk", sans-serif;
+
+}
+
+
+.brand-name {
+
+  font: 700 20px "Space Grotesk", sans-serif;
+
+}
+
+
+.brand-name span {
+
+  color: var(--orange);
+
+}
+
+
+.back-btn {
+
+  margin-left: auto;
+
+  text-decoration: none;
+
+  color: var(--ink);
+
+  font-size: 12px;
+
+  font-weight: 700;
+
+  padding: 10px 15px;
+
+  border: 1px solid var(--line);
+
+  border-radius: 9px;
+
+  background: white;
+
+  transition: 0.2s ease;
+
+}
+
+
+.back-btn:hover {
+
+  color: var(--orange);
+
+  border-color: var(--orange);
+
+}
+
+
+/* =========================
+   PAGE
+========================= */
+
+.cart-page {
+
+  width: min(1100px, 88%);
+
+  margin: 45px auto 70px;
+
+}
+
+
+.cart-header {
+
+  margin-bottom: 30px;
+
+}
+
+
+.eyebrow {
+
+  color: var(--orange);
+
+  font-size: 10px;
+
+  font-weight: 800;
+
+  letter-spacing: 1.6px;
+
+}
+
+
+.cart-header h1 {
+
+  margin-top: 8px;
+
+  font: 700 36px "Space Grotesk", sans-serif;
+
+  letter-spacing: -1px;
+
+}
+
+
+.cart-header p {
+
+  margin-top: 7px;
+
+  color: var(--muted);
+
+  font-size: 13px;
+
+}
+
+
+.cart-status {
+
+  color: var(--muted);
+
+  font-size: 12px;
+
+  margin-bottom: 15px;
+
+}
+
+
+/* =========================
+   LAYOUT
+========================= */
+
+.cart-layout {
+
+  display: grid;
+
+  grid-template-columns: 1fr 320px;
+
+  gap: 20px;
+
+  align-items: start;
+
+}
+
+
+/* =========================
+   CART ITEMS
+========================= */
+
+.cart-items {
+
+  display: flex;
+
+  flex-direction: column;
+
+  gap: 12px;
+
+}
+
+
+.cart-item {
+
+  display: flex;
+
+  align-items: center;
+
+  gap: 15px;
+
+  padding: 18px;
+
+  background: white;
+
+  border: 1px solid var(--line);
+
+  border-radius: 15px;
+
+}
+
+
+.cart-icon {
+
+  width: 55px;
+
+  height: 55px;
+
+  flex-shrink: 0;
+
+  display: grid;
+
+  place-items: center;
+
+  border-radius: 13px;
+
+  background: var(--soft-orange);
+
+  font-size: 25px;
+
+}
+
+
+.cart-info {
+
+  flex: 1;
+
+}
+
+
+.cart-info h3 {
+
+  font: 700 15px "Space Grotesk", sans-serif;
+
+}
+
+
+.cart-info p {
+
+  margin-top: 4px;
+
+  color: var(--muted);
+
+  font-size: 10px;
+
+}
+
+
+.cart-price {
+
+  margin-top: 7px;
+
+  color: var(--orange);
+
+  font: 700 14px "Space Grotesk", sans-serif;
+
+}
+
+
+/* =========================
+   QUANTITY
+========================= */
+
+.quantity-control {
+
+  display: flex;
+
+  align-items: center;
+
+  gap: 9px;
+
+}
+
+
+.quantity-control button {
+
+  width: 30px;
+
+  height: 30px;
+
+  border: 1px solid var(--line);
+
+  border-radius: 8px;
+
+  background: white;
+
+  color: var(--ink);
+
+  cursor: pointer;
+
+  font-size: 16px;
+
+}
+
+
+.quantity-control button:hover {
+
+  border-color: var(--orange);
+
+  color: var(--orange);
+
+}
+
+
+.quantity-value {
+
+  min-width: 20px;
+
+  text-align: center;
+
+  font-weight: 700;
+
+  font-size: 12px;
+
+}
+
+
+.item-subtotal {
+
+  min-width: 75px;
+
+  text-align: right;
+
+  font: 700 14px "Space Grotesk", sans-serif;
+
+}
+
+
+.remove-btn {
+
+  border: none;
+
+  background: transparent;
+
+  color: #a19a94;
+
+  cursor: pointer;
+
+  font-size: 16px;
+
+}
+
+
+.remove-btn:hover {
+
+  color: #c44b3c;
+
+}
+
+
+/* =========================
+   SUMMARY
+========================= */
+
+.summary-card {
+
+  padding: 23px;
+
+  background: white;
+
+  border: 1px solid var(--line);
+
+  border-radius: 17px;
+
+  position: sticky;
+
+  top: 20px;
+
+}
+
+
+.summary-card h2 {
+
+  font: 700 18px "Space Grotesk", sans-serif;
+
+  margin-bottom: 20px;
+
+}
+
+
+.summary-row,
+.total-row {
+
+  display: flex;
+
+  justify-content: space-between;
+
+  align-items: center;
+
+}
+
+
+.summary-row {
+
+  color: var(--muted);
+
+  font-size: 11px;
+
+  margin-bottom: 12px;
+
+}
+
+
+.summary-row strong {
+
+  color: var(--ink);
+
+}
+
+
+.summary-line {
+
+  height: 1px;
+
+  background: var(--line);
+
+  margin: 18px 0;
+
+}
+
+
+.total-row span {
+
+  font: 700 14px "Space Grotesk", sans-serif;
+
+}
+
+
+.total-row strong {
+
+  color: var(--orange);
+
+  font: 700 20px "Space Grotesk", sans-serif;
+
+}
+
+
+.checkout-btn {
+
+  width: 100%;
+
+  margin-top: 22px;
+
+  border: none;
+
+  border-radius: 10px;
+
+  padding: 13px;
+
+  background: var(--orange);
+
+  color: white;
+
+  cursor: pointer;
+
+  font: 700 11px "DM Sans", sans-serif;
+
+  transition: 0.2s ease;
+
+}
+
+
+.checkout-btn:hover {
+
+  background: var(--orange-dark);
+
+  transform: translateY(-1px);
+
+}
+
+
+/* =========================
+   EMPTY CART
+========================= */
+
+.empty-cart {
+
+  padding: 55px 20px;
+
+  text-align: center;
+
+  background: white;
+
+  border: 1px solid var(--line);
+
+  border-radius: 17px;
+
+}
+
+
+.empty-cart-icon {
+
+  font-size: 45px;
+
+  margin-bottom: 15px;
+
+}
+
+
+.empty-cart h2 {
+
+  font: 700 20px "Space Grotesk", sans-serif;
+
+}
+
+
+.empty-cart p {
+
+  margin-top: 7px;
+
+  color: var(--muted);
+
+  font-size: 11px;
+
+}
+
+
+.empty-cart a {
+
+  display: inline-block;
+
+  margin-top: 18px;
+
+  padding: 10px 15px;
+
+  border-radius: 9px;
+
+  background: var(--orange);
+
+  color: white;
+
+  text-decoration: none;
+
+  font-size: 11px;
+
+  font-weight: 700;
+
+}
+
+
+/* =========================
+   MOBILE
+========================= */
+
+@media (max-width: 800px) {
+
+  .cart-layout {
+
+    grid-template-columns: 1fr;
+
+  }
+
+  .summary-card {
+
+    position: static;
+
+  }
+
+}
+
+
+@media (max-width: 600px) {
+
+  .cart-page {
+
+    width: 90%;
+
+    margin-top: 30px;
+
+  }
+
+  .cart-item {
+
+    align-items: flex-start;
+
+    flex-wrap: wrap;
+
+  }
+
+  .item-subtotal {
+
+    margin-left: 70px;
+
+    text-align: left;
+
+  }
+
+}
+
+/* =========================
+   PAYMENT METHOD
+========================= */
+
+.payment-section {
+  margin-top: 22px;
+}
+
+.payment-section h3 {
+  font: 700 13px "Space Grotesk", sans-serif;
+  margin-bottom: 12px;
+}
+
+.payment-option {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 11px 12px;
+  margin-bottom: 8px;
+  border: 1px solid var(--line);
+  border-radius: 10px;
+  cursor: pointer;
+  font-size: 12px;
+  transition: 0.2s ease;
+}
+
+.payment-option:hover {
+  border-color: var(--orange);
+  background: var(--soft-orange);
+}
+
+.payment-option input {
+  accent-color: var(--orange);
+}

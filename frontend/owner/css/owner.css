@@ -1,0 +1,1149 @@
+:root {
+  --cream: #f4efe9;
+  --orange: #ff6b35;
+  --ink: #252321;
+  --muted: #77716b;
+  --line: #e2dbd4;
+  --soft: #fff1ea;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background: var(--cream);
+  color: var(--ink);
+  font-family: "DM Sans", sans-serif;
+}
+
+header {
+  height: 76px;
+  background: white;
+  border-bottom: 1px solid var(--line);
+
+  padding: 0 6%;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.brand {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+
+  text-decoration: none;
+  color: var(--ink);
+}
+
+.brand > span {
+  width: 36px;
+  height: 36px;
+
+  border-radius: 10px;
+
+  background: var(--orange);
+  color: white;
+
+  display: grid;
+  place-items: center;
+
+  font: 700 12px "Space Grotesk";
+}
+
+.brand b {
+  font: 700 20px "Space Grotesk";
+}
+
+.brand b span {
+  color: var(--orange);
+}
+
+.right {
+  display: flex;
+  align-items: center;
+  gap: 18px;
+
+  font-size: 13px;
+}
+
+.right button,
+.secondary {
+  border: 0;
+  border-radius: 9px;
+
+  padding: 10px 15px;
+
+  background: var(--ink);
+  color: white;
+
+  font-weight: 700;
+  cursor: pointer;
+}
+
+.right button:hover,
+.secondary:hover {
+  background: var(--orange);
+}
+
+main {
+  width: min(1100px, 88%);
+  margin: 38px auto 60px;
+}
+
+.hero {
+  background: var(--ink);
+  color: white;
+
+  border-radius: 23px;
+
+  padding: 42px 48px;
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  margin-bottom: 22px;
+}
+
+.hero small,
+.panel-title small {
+  font-size: 10px;
+  color: var(--orange);
+
+  font-weight: 800;
+  letter-spacing: 1.5px;
+}
+
+.hero h1 {
+  font: 700 34px "Space Grotesk";
+  margin: 10px 0;
+}
+
+.hero p {
+  color: #c9c2bb;
+  font-size: 14px;
+}
+
+.hero-icon {
+  width: 105px;
+  height: 105px;
+
+  border-radius: 25px;
+
+  background: #4a3026;
+
+  display: grid;
+  place-items: center;
+
+  font-size: 50px;
+}
+
+.layout {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 18px;
+}
+
+.panel {
+  background: white;
+
+  border: 1px solid var(--line);
+  border-radius: 17px;
+
+  padding: 25px;
+}
+
+.panel-title {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  margin-bottom: 20px;
+}
+
+.panel-title h2 {
+  font: 700 20px "Space Grotesk";
+  margin-top: 5px;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 13px;
+}
+
+label {
+  font-size: 11px;
+  font-weight: 700;
+}
+
+input,
+select,
+textarea {
+  width: 100%;
+
+  margin-top: 6px;
+
+  padding: 11px 12px;
+
+  border: 1px solid var(--line);
+  border-radius: 9px;
+
+  background: white;
+
+  font: 13px "DM Sans";
+
+  outline: none;
+}
+
+input:focus,
+select:focus,
+textarea:focus {
+  border-color: var(--orange);
+}
+
+textarea {
+  height: 70px;
+  resize: vertical;
+}
+
+.two {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 10px;
+}
+
+.primary {
+  border: 0;
+  border-radius: 9px;
+
+  padding: 12px;
+
+  background: var(--orange);
+  color: white;
+
+  font-weight: 700;
+
+  cursor: pointer;
+}
+
+.primary:hover {
+  background: #e85a28;
+}
+
+.message {
+  color: var(--muted);
+  font-size: 11px;
+
+  margin-top: 10px;
+
+  min-height: 16px;
+}
+
+.menu-panel {
+  margin-top: 18px;
+}
+
+.secondary {
+  font-size: 11px;
+}
+
+.published {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 12px;
+}
+
+.item {
+  border: 1px solid var(--line);
+  border-radius: 12px;
+
+  padding: 16px;
+}
+
+.item h3 {
+  font: 700 15px "Space Grotesk";
+}
+
+.item p {
+  color: var(--muted);
+  font-size: 11px;
+
+  margin: 6px 0;
+}
+
+.item strong {
+  font: 700 15px "Space Grotesk";
+}
+
+.badge {
+  display: inline-block;
+
+  background: var(--soft);
+  color: var(--orange);
+
+  font-size: 9px;
+  font-weight: 800;
+
+  padding: 5px 8px;
+
+  border-radius: 20px;
+
+  margin-bottom: 10px;
+}
+
+@media (max-width: 800px) {
+
+  .layout {
+    grid-template-columns: 1fr;
+  }
+
+  .published {
+    grid-template-columns: 1fr 1fr;
+  }
+
+}
+
+@media (max-width: 550px) {
+
+  .hero {
+    padding: 30px;
+  }
+
+  .hero-icon {
+    display: none;
+  }
+
+  .published {
+    grid-template-columns: 1fr;
+  }
+
+  .two {
+    grid-template-columns: 1fr;
+  }
+
+}
+
+/* =========================
+   OWNER ORDERS
+   ========================= */
+
+.orders-panel {
+  margin-top: 28px;
+}
+
+.owner-orders {
+  display: grid;
+  gap: 18px;
+  margin-top: 18px;
+}
+
+.owner-order-card {
+  background: #ffffff;
+  border: 1px solid #e7e7e7;
+  border-radius: 18px;
+  padding: 22px;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.06);
+}
+
+.owner-order-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 16px;
+  padding-bottom: 16px;
+  border-bottom: 1px solid #eeeeee;
+}
+
+.order-label {
+  display: block;
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 1.5px;
+  color: #888;
+  margin-bottom: 4px;
+}
+
+.owner-order-header h3 {
+  margin: 0;
+  font-family: "Space Grotesk", sans-serif;
+  font-size: 20px;
+}
+
+.order-status {
+  padding: 7px 12px;
+  border-radius: 999px;
+  background: #fff3df;
+  color: #b56500;
+  font-size: 12px;
+  font-weight: 700;
+}
+
+.order-student {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  padding: 16px 0;
+}
+
+.order-student strong {
+  font-size: 15px;
+}
+
+.order-student span {
+  font-size: 13px;
+  color: #777;
+}
+
+.order-foods {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  padding: 15px 0;
+  border-top: 1px solid #eeeeee;
+  border-bottom: 1px solid #eeeeee;
+}
+
+.order-food {
+  display: grid;
+  grid-template-columns: 1fr auto auto;
+  align-items: center;
+  gap: 20px;
+  font-size: 14px;
+}
+
+.order-food span:nth-child(2) {
+  color: #777;
+}
+
+.order-food strong {
+  min-width: 75px;
+  text-align: right;
+}
+
+.owner-order-footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 20px;
+  padding-top: 16px;
+}
+
+.owner-order-footer > div {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 18px;
+  color: #666;
+  font-size: 13px;
+}
+
+.owner-order-footer > strong {
+  font-size: 18px;
+  font-family: "Space Grotesk", sans-serif;
+}
+
+.empty-orders {
+  text-align: center;
+  padding: 45px 20px;
+  border: 1px dashed #d8d8d8;
+  border-radius: 18px;
+  color: #777;
+}
+
+.empty-orders h3 {
+  margin: 10px 0 5px;
+  color: #222;
+}
+
+.empty-orders p {
+  margin: 0;
+}
+
+
+/* =========================
+   MOBILE
+   ========================= */
+
+@media (max-width: 650px) {
+
+  .owner-order-card {
+    padding: 16px;
+  }
+
+  .owner-order-header {
+    align-items: flex-start;
+  }
+
+  .order-food {
+    grid-template-columns: 1fr auto;
+  }
+
+  .order-food strong {
+    grid-column: 2;
+  }
+
+  .owner-order-footer {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .owner-order-footer > strong {
+    align-self: flex-end;
+  }
+
+}
+
+/* =========================
+   QR SCANNER
+   ========================= */
+
+.scanner-panel {
+  margin-top: 28px;
+}
+
+.scanner-description {
+  color: var(--muted);
+  font-size: 13px;
+  margin-bottom: 20px;
+  line-height: 1.6;
+}
+
+
+/* Camera container */
+
+.scanner-box {
+  width: min(100%, 420px);
+  margin: 0 auto;
+  border-radius: 20px;
+  overflow: hidden;
+
+  background: #181716;
+
+  box-shadow:
+    0 12px 30px rgba(0, 0, 0, 0.12);
+
+  position: relative;
+}
+
+
+/* Hide camera area completely when scanner is OFF */
+
+#qr-reader {
+  display: none;
+  width: 100% !important;
+  border: 0 !important;
+  border-radius: 14px;
+  overflow: hidden;
+}
+
+
+/* Show camera only while scanner is active */
+
+#qr-reader.scanner-active {
+  display: block;
+}
+
+
+/* Camera preview */
+
+#qr-reader video {
+  width: 100% !important;
+  height: auto !important;
+  display: block !important;
+  border-radius: 14px;
+}
+
+
+/* Remove default library borders */
+
+#qr-reader__dashboard_section {
+  padding: 12px !important;
+}
+
+#qr-reader__dashboard_section_csr {
+  margin: 0 !important;
+}
+
+#qr-reader__dashboard_section_swaplink {
+  color: var(--orange) !important;
+  font-weight: 700;
+}
+
+
+/* Library buttons */
+
+#qr-reader button {
+  border: 0 !important;
+  border-radius: 9px !important;
+  padding: 9px 14px !important;
+
+  background: var(--orange) !important;
+  color: white !important;
+
+  font-family: "DM Sans", sans-serif !important;
+  font-weight: 700 !important;
+
+  cursor: pointer;
+}
+
+#qr-reader button:hover {
+  background: #e85a28 !important;
+}
+
+
+/* Scanner message */
+
+.scanner-panel > .message {
+  text-align: center;
+  margin-top: 15px;
+  font-size: 12px;
+  color: var(--muted);
+}
+
+
+/* =========================
+   SCANNER CONTROLS
+   ========================= */
+
+.scanner-controls {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  margin-top: 18px;
+}
+
+.scanner-control-btn {
+  min-width: 150px;
+}
+
+.scanner-control-btn:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+
+/* =========================
+   MOBILE
+   ========================= */
+
+@media (max-width: 550px) {
+
+  .scanner-box {
+    border-radius: 16px;
+  }
+
+  #qr-reader {
+    border-radius: 11px;
+  }
+
+  #qr-reader video {
+    border-radius: 11px;
+  }
+
+  .scanner-controls {
+    flex-direction: column;
+  }
+
+  .scanner-control-btn {
+    width: 100%;
+  }
+
+}
+
+
+/* =========================
+   SCANNER CONTROLS
+   ========================= */
+
+.scanner-controls {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+
+  margin-top: 18px;
+}
+
+.scanner-control-btn {
+  min-width: 150px;
+}
+
+.scanner-control-btn:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+
+
+
+
+/* =========================
+   SUCCESS / ERROR
+   ========================= */
+
+.scan-success,
+.scan-error {
+  text-align: center;
+}
+
+.scan-success .success-icon {
+  width: 50px;
+  height: 50px;
+
+  margin: 0 auto 10px;
+
+  border-radius: 50%;
+
+  display: grid;
+  place-items: center;
+
+  background: #e9f7ed;
+  color: #299447;
+
+  font-size: 25px;
+  font-weight: 800;
+}
+
+.scan-success h3 {
+  margin-bottom: 5px;
+
+  font-family: "Space Grotesk", sans-serif;
+}
+
+.scan-success p {
+  font-weight: 700;
+}
+
+.scan-success small {
+  display: block;
+
+  margin-top: 8px;
+
+  color: var(--muted);
+}
+
+.scan-error {
+  color: #b3261e;
+  font-weight: 700;
+}
+
+
+/* =========================
+   MOBILE
+   ========================= */
+
+@media (max-width: 550px) {
+
+  .scanner-controls {
+    flex-direction: column;
+  }
+
+  .scanner-control-btn {
+    width: 100%;
+  }
+
+}
+
+/* =========================
+   VERIFIED ORDER
+   ========================= */
+
+.verified-order {
+  background: white;
+  border-radius: 16px;
+  overflow: hidden;
+  font-size: 14px;
+}
+
+
+/* Verification banner */
+
+.verified-success-banner {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+
+  padding: 17px 20px;
+
+  background: #eef8f1;
+  border-bottom: 1px solid #d8eddd;
+
+  color: #287b3c;
+}
+
+.verified-check {
+  width: 38px;
+  height: 38px;
+
+  border-radius: 50%;
+
+  display: grid;
+  place-items: center;
+
+  background: #299447;
+  color: white;
+
+  font-size: 17px;
+  font-weight: 800;
+}
+
+.verified-success-banner strong {
+  display: block;
+  font-size: 15px;
+}
+
+.verified-success-banner span {
+  display: block;
+
+  margin-top: 3px;
+
+  font-size: 12px;
+  color: #5c8b66;
+}
+
+
+/* Header */
+
+.verified-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  padding: 22px 20px 17px;
+
+  border-bottom: 1px solid var(--line);
+}
+
+.verified-header small,
+.verified-label {
+  font-size: 10px;
+  font-weight: 800;
+  letter-spacing: 1.4px;
+  color: var(--muted);
+}
+
+.verified-header h3 {
+  margin-top: 6px;
+
+  font: 700 23px "Space Grotesk";
+}
+
+.verified-badge {
+  padding: 7px 12px;
+
+  border-radius: 999px;
+
+  background: #eef8f1;
+  color: #299447;
+
+  font-size: 10px;
+  font-weight: 800;
+}
+
+
+/* Student */
+
+.verified-student {
+  padding: 18px 20px;
+
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+
+  border-bottom: 1px solid var(--line);
+}
+
+.verified-student strong {
+  font-size: 16px;
+}
+
+.verified-student > span:not(.verified-label) {
+  color: var(--muted);
+  font-size: 13px;
+}
+
+
+/* =========================
+   PAYMENT
+   ========================= */
+
+.verified-payment {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  margin: 16px 20px;
+  padding: 15px 17px;
+
+  border-radius: 12px;
+
+  background: #faf7f3;
+  border: 1px solid var(--line);
+
+  font-size: 14px;
+}
+
+.verified-payment span {
+  color: var(--muted);
+  font-weight: 600;
+}
+
+.verified-payment strong {
+  font-family: "Space Grotesk", sans-serif;
+  font-size: 14px;
+}
+
+.verified-payment .payment-online {
+  color: #299447 !important;
+}
+
+.verified-payment .payment-cash {
+  color: #d93025 !important;
+}
+
+
+/* =========================
+   ORDER ITEMS
+   ========================= */
+
+.verified-items {
+  padding: 18px 20px;
+}
+
+.verified-items-title {
+  margin-bottom: 12px;
+
+  font-size: 10px;
+  font-weight: 800;
+  letter-spacing: 1.4px;
+  color: var(--muted);
+}
+
+
+/* Individual food row */
+
+.verified-item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  padding: 13px 0;
+
+  border-bottom: 1px dashed var(--line);
+
+  gap: 20px;
+}
+
+.verified-item:last-child {
+  border-bottom: 0;
+}
+
+.verified-item-info {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+
+  min-width: 0;
+}
+
+
+/* Food name gets visual priority */
+
+.verified-food-name {
+  font-size: 19px;
+  font-weight: 700;
+  color: var(--ink);
+}
+
+
+/* Quantity gets its own strong visual treatment */
+
+.verified-food-qty {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+
+  min-width: 42px;
+
+  padding: 5px 9px;
+
+  border-radius: 8px;
+
+  background: var(--soft);
+  color: var(--orange);
+
+  font-size: 16px;
+  font-weight: 800;
+}
+
+.verified-item strong {
+  font-size: 15px;
+  font-family: "Space Grotesk", sans-serif;
+  white-space: nowrap;
+}
+
+
+/* =========================
+   TOTAL
+   ========================= */
+
+.verified-total {
+  margin: 0 20px;
+
+  padding: 17px 0;
+
+  border-top: 1px solid var(--line);
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.verified-total span {
+  color: var(--muted);
+  font-size: 13px;
+}
+
+.verified-total strong {
+  font: 700 23px "Space Grotesk";
+}
+
+
+/* =========================
+   COMPLETE BUTTON
+   ========================= */
+
+.complete-order-btn {
+  width: calc(100% - 40px);
+
+  margin: 4px 20px 0;
+
+  padding: 15px;
+
+  border: 0;
+  border-radius: 11px;
+
+  background: #299447;
+  color: white;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 9px;
+
+  font: 700 15px "DM Sans";
+
+  cursor: pointer;
+
+  transition:
+    transform 0.15s ease,
+    background 0.15s ease;
+}
+
+.complete-order-btn:hover {
+  background: #247f3c;
+  transform: translateY(-1px);
+}
+
+.complete-order-btn:active {
+  transform: translateY(0);
+}
+
+.complete-order-btn:disabled {
+  opacity: 0.65;
+  cursor: not-allowed;
+  transform: none;
+}
+
+
+/* Warning */
+
+.complete-warning {
+  margin: 10px 20px 19px;
+
+  text-align: center;
+
+  color: var(--muted);
+
+  font-size: 11px;
+  line-height: 1.5;
+}
+
+/* =========================
+   OWNER NAVBAR
+   ========================= */
+
+.owner-nav {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-left: auto;
+  margin-right: 35px;
+}
+
+.owner-nav a {
+  text-decoration: none;
+  color: var(--muted);
+  font-size: 13px;
+  font-weight: 700;
+  padding: 9px 12px;
+  border-radius: 9px;
+  transition: 
+    background 0.2s ease,
+    color 0.2s ease,
+    transform 0.2s ease;
+}
+
+.owner-nav a:hover {
+  background: var(--soft);
+  color: var(--orange);
+  transform: translateY(-1px);
+}
+
+.owner-nav a.active {
+  background: var(--soft);
+  color: var(--orange);
+}
+
+/* Keep navbar usable on smaller screens */
+
+@media (max-width: 900px) {
+
+  header {
+    height: auto;
+    min-height: 76px;
+    padding: 14px 4%;
+    flex-wrap: wrap;
+    gap: 12px;
+  }
+
+  .owner-nav {
+    order: 3;
+    width: 100%;
+    justify-content: center;
+    margin: 5px 0 0;
+    flex-wrap: wrap;
+  }
+
+}
+
+@media (max-width: 550px) {
+
+  .owner-nav {
+    gap: 4px;
+  }
+
+  .owner-nav a {
+    font-size: 11px;
+    padding: 8px 9px;
+  }
+
+  .right strong {
+    display: none;
+  }
+
+}
